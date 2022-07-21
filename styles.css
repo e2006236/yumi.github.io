@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+/*全称セレクタ（すべての要素に適用される）*/
+/** {
+    color: brown;
+}*/
+
+/*要素セレクタ （htmlタグを指定する方法）*/
+ul {
+    list-style: none;
+}
+
+table {
+    /*罫線を表示するプロパティ（太さ、タイプ、色）*/
+    border: 1px solid red;
+}
+th {
+    border: 8px double black;
+}
+
+td {
+    border: 2px dashed blue;
+    border-radius: 12px;
+    /*角丸くする*/
+} 
+
+h1 {
+    border: 2px dashed salmon;
+    border-radius: 12px;
+}
+
+/*IDセレクタ*/
+#top {
+    color: blueviolet;
+}
+
+/*クラスセレクタ*/
+.green {
+    color: green;
+}
+
+/*属性セレクタ*/
+a[href] {
+    color: black;
+}
+
+/*指定した文字列で始まる*/
+a[href^="jp"] {
+    color: magenta;
+}
+
+/*指定したい文字列で終わる*/
+a[href$="jp"] {
+    color: magenta;
+}
+
+/*指定した文字列が含まれる*/
+a[href*="http"] {
+    color: magenta;
+}
+
+p[class="green"]{
+    border-left: 8px solid black;
+    text-indent: 10px;
+}
+
+/*疑似クラスタセレクタ*/
+/*ポインタが要素に乗っている状態*/
+a:hover {
+    font-size: 4em;
+}
+
+p:hover{
+    color: coral;
+}
+
+td:hover{
+    font-size: 2em;
+}
+
+/*未訪問のリンク*/
+a:link{
+    font-size: 2em;
+}
+
+/*訪問済みのリンク*/
+a:visited{
+    font-size: 0.5em;
+}
+
+/*同階層の奇数番目を指定する疑似クラス*/
+tr:nth-child(even){
+    background-color: aquamarine;
+}
+
+/*同階層の偶数番目を指定する疑似クラス*/
+tr:nth-child(odd){
+    background-color: rebeccapurple;
+}
+
+/*An+Bのような関数記法で位置を指定する*/
+tr:nth-child(3n){
+    background-color: yellow;
+}
+
+/*同じ階層内での最初の要素*/
+tr:first-child{
+    font-size: 2em;
+}
+
+/*同じ階層内での最後の要素*/
+tr:last-child{
+    font-size: 0.7em;
+}
+
+/*疑似要素セレクタ*/
+p::first-letter{
+    font-size: 2em;
+    color: darkred;
+}
+
+
+/*クラスタ結合子*/
+
+/*複数のセレクタを同時に指定する*/  
+h1,.green{
+    text-align: center;
+}
+
+/*小孫結合子*/
+div li{
+    text-align: right;
+}
+
+/*子結合*/
+p > span {
+    background-color: aqua;
+}
+
+/*隣接兄弟結合子*/
+li + li {
+    background-color: aqua;
+}
+
+/*一般兄弟結合子*/
+h2 ~ p {
+    background-color: brown;
+}
